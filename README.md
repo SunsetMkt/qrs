@@ -51,6 +51,21 @@ Scientists have already achieved very mature research results on how to efficien
 
 <video src="https://github.com/user-attachments/assets/b4f8a122-02c7-4754-9ec0-121e42f8b22d"></video>
 
+## Export an animated GIF
+
+After selecting a file on the **Send** page, expand **Save QR sequence as GIF**.
+Choose a multiple of the data block count (1.5× by default) or an exact frame
+count, then set the playback speed and image size and select **Export GIF**.
+Frame counts are not capped. Larger sequences take longer to encode and use more
+memory. You can cancel an export while it is running.
+
+The export uses a separate fountain-code encoder and pauses the live QR stream
+until it finishes. GIF encoding is loaded only when needed, and the QR modules
+are written directly as lossless black-and-white pixels. Before downloading,
+the exported sequence is decoded and compared with the input. If it cannot be
+recovered, increase the multiplier or frame count and try again. This check
+verifies the data in the sequence; camera scanning may still miss frames.
+
 ## Build & run
 
 **1. Install Dependencies**
